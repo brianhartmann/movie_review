@@ -1,0 +1,12 @@
+services:
+  frontend:
+    image: movie_review_frontend:1.0.0
+    container_name: frontend
+    ports:
+      - "3000:80"
+  movie_review:
+    image: movie_review_api:1.0.0
+    container_name: api
+    ports:
+      - "8080:8080"
+      
