@@ -1,6 +1,0 @@
-services:
-  movie_review:
-    image: movie_review:1.0.0
-    container_name: "movie_review"
-    ports:
-      - "8080:8080"
