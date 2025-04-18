@@ -1,8 +1,5 @@
 services:
   movie_review:
-    build:
-      context: ..
-      dockerfile: docker/Dockerfile
     image: movie_review:1.0.0
     container_name: "movie_review"
     ports:
