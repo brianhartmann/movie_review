@@ -1,4 +1,4 @@
-import { Container, Table } from '@mantine/core';
+import { Table } from '@mantine/core';
 import { IconPencil } from '@tabler/icons-react';
 
 function ReviewTable() {
