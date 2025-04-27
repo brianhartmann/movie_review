@@ -1,30 +1,20 @@
-import './App.css';
-import { Title, Container, Input, Center, Button} from '@mantine/core';
-import Toolbar from './Toolbar';
-import ReviewTable from './ReviewTable';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './Home';
+import Login from './Login';
+import { ForgotPassword } from './ForgotPassword';
+import Register from './Register';
 
 function App() {
-  return (<>
-    <Toolbar />
-    <Container size={'80%'}>
-      <Center>
-      <Title order={3} style={{ marginTop: '10px', marginLeft: '10px' }}>
-        Hey Brian! Please review a movie.
-      </Title>
-      </Center>
-      <Container size={'50%'} style={{ marginTop: '10px', marginBottom: '10px' }}>
-        <Center style={{ marginTop: '10px', padding: '10px' }}>
-            <Input style={{marginRight: '10px'}} placeholder="Title" />
-            <Input placeholder="Rating out of 10" />
-            <Button style={{ marginLeft: '10px' }} variant="outline">
-              Submit
-            </Button>
-        </Center>
-        <ReviewTable />
-      </Container>
-
-    </Container>
-    </>
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="*" element={<h1>404 Not Found</h1>} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/register" element={<Register /> } />
+      </Routes>
+    </Router>
   );
 }
 
